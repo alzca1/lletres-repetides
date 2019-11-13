@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lletres Repetides</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="styles/...." />
+  </head>
+
+  <body>
+    <h1>Fase 3</h1>
+
+    <script>
+      let name = "Alvarado57";
+
+      let nombreeArray = Array.from(name.toUpperCase());
+      const vocales = ["A", "E", "I", "O", "U"];
+      var magatzem = new Map();
+      let pattern = /\d/g;
+
+      console.log(`Partim del nom: ${name.toUpperCase()}`);
+
+      for (let element of nombreeArray) {
+        if (vocales.indexOf(element) !== -1) {
+          console.log(`He trobat la VOCAL: ${element}`);
+          setter(magatzem, element);
+        } else if (element.match(pattern)) {
+          console.log(`Els noms de persones no contenen el número: ${element}`);
+        } else {
+          console.log(`He trobat la CONSONANT: ${element}`);
+          setter(magatzem, element);
+        }
+      }
+
+      function setter(collection, key) {
+        if (typeof collection.get(key) === "number") {
+          collection.set(key, collection.get(key) + 1);
+        } else {
+          collection.set(key, 1);
+        }
+      }
+
+      console.log(magatzem);
+    </script>
+  </body>
+</html>
