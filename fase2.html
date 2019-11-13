@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lletres Repetides</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="styles/...." />
+  </head>
+
+  <body>
+    <h1>Fase 2</h1>
+
+    <script>
+      let name = "Alvaro";
+      let nombreeArray = Array.from(name.toUpperCase());
+      const vocales = ["A", "E", "I", "O", "U"];
+
+      for (let i = 0; i < nombreeArray.length; i++) {
+        if (vocales.indexOf(nombreeArray[i]) !== -1) {
+          console.log(`He trobat la VOCAL:${nombreeArray[i]}`);
+        }else if( typeof nombreeArray[i] === 'number'){
+            console.log(`Els noms de persones no contenen el número: ${nombreeArray[i]}`)
+        }else{
+          console.log(`He trobat la CONSONANT:${nombreeArray[i]}`)
+        }
+      }
+
+
+    </script>
+  </body>
+</html>
